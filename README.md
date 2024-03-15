@@ -2,7 +2,7 @@
 
 给飞书添加一个独立的顶部搜索入口 :p
 
-![screenshot](https://github.com/Antonoko/feishu-standalone-search/blob/main/__assets__/screenshot-gif.jpg)
+![screenshot](https://github.com/Antonoko/feishu-standalone-search/blob/main/__asset__/screenshot-gif.gif)
 
 ### 如何使用
 - 在 [Release](https://github.com/Antonoko/feishu-standalone-search/releases) 下载可执行文件。由于没有进行签名，可能会被系统安全软件拦截，需要手动信任。
