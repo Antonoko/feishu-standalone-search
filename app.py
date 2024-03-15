@@ -1,5 +1,8 @@
 import os
 import sys
+import platform
+import win32gui
+import win32con
 
 if getattr(sys, 'frozen', False):
     # 如果程序已经被打包
@@ -8,10 +11,6 @@ else:
     bundle_dir = os.path.dirname(os.path.abspath(__file__))
 
 import pyautogui
-import platform
-import win32gui
-import win32con
-
 from PyQt5.QtWidgets import QApplication, QLabel, QAction, QMenu
 from PyQt5.QtCore import Qt, QTime
 from PyQt5.QtGui import QPixmap
@@ -45,10 +44,10 @@ def callFeishuSearch():
             if hwnd:
                 win32gui.ShowWindow(hwnd, win32con.SW_RESTORE)
                 win32gui.SetForegroundWindow(hwnd)
+                pyautogui.hotkey('ctrl', 'k')
         elif platform.system() == "Darwin":  # macOS
-            pass
             os.system('''/usr/bin/osascript -e 'tell app "{}" to activate' '''.format(title))
-        pyautogui.hotkey('ctrl', 'k')  # 使用pyautogui模拟热键
+            pyautogui.hotkey('command', 'k')
 
 
 # 定义鼠标点击事件
