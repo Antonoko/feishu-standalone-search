@@ -1,8 +1,10 @@
 import os
 import sys
 import platform
-import win32gui
-import win32con
+
+if platform.system() == "Windows":
+    import win32gui
+    import win32con
 
 if getattr(sys, 'frozen', False):
     # 如果程序已经被打包

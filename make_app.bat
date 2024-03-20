@@ -7,6 +7,6 @@ pyinstaller --add-data "resource;resource" --name BDOLarkSearch -F -w -i icon.ic
 echo.
 echo   making macOS app...
 echo.
-@REM pyinstaller --add-data "resource;resource" --name BDOLarkSearch --windowed --onefile -i icon.icns app.py
+@REM pyinstaller --add-data resource:resource --name BDOLarkSearch -F -w -i icon.icns app.py
 
 pause
